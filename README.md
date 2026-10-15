@@ -14,3 +14,29 @@ curl https://start.spring.io/starter.zip \
 ```
 ./mvnw spring-boot:run
 ```
+* এই ফোল্ডার পাথে (File Location) যান:src ➔ main ➔ java ➔ com ➔ example ➔ myapp ফাইলটি ওপেন করে কোডটি ঠিক নিচের মতো বদলে দিন (Modify করুন): অবশ্যই ফাইলের নাম এই MyAppApplication নামের সাথে মিল করে দিন  
+  ```
+  package com.example.myapp;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@SpringBootApplication
+@RestController  // ১. স্প্রিং-কে বলছি এটি একটি ওয়েব কন্ট্রোলার
+public class MyAppApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(MyAppApplication.class, args);
+    }
+
+    // ২. নতুন একটি এন্ডপয়েন্ট বা রাউট তৈরি করছি
+    @GetMapping("/")
+    public String sayHello() {
+        return "Hello, World! I am learning Spring Boot";
+    }
+}
+```
+*পুনরায় রান করার পর নিচের url এ যেয়ে চেক করুন যে সব কিছু ঠিকভবে কাজ করতেছে নাকি ঃ
+```localhost:8080```
