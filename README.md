@@ -14,10 +14,10 @@ curl https://start.spring.io/starter.zip \
 ```
 ./mvnw spring-boot:run
 ```
-* এই ফোল্ডার পাথে (File Location) যান:src ➔ main ➔ java ➔ com ➔ example ➔ myapp ফাইলটি ওপেন করে কোডটি ঠিক নিচের মতো বদলে দিন (Modify করুন): অবশ্যই ফাইলের নাম এই MyAppApplication নামের সাথে মিল করে দিন  
-  ```
-  package com.example.myapp;
+* এই ফোল্ডার পাথে (File Location) যান:src ➔ main ➔ java ➔ com ➔ example ➔ myapp ফাইলটি ওপেন করে কোডটি ঠিক নিচের মতো বদলে দিন (Modify করুন): অবশ্যই ফাইলের নাম এই MyAppApplication নামের সাথে মিল করে দিন
 
+```
+package com.example.myapp;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
